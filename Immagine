@@ -1,0 +1,41 @@
+function setup() {
+ 
+  createCanvas(256, 512);
+ background("#ccdbfd");
+ 
+  //fiore
+  noStroke()
+  
+fill("#e9ecef");
+  rect(120, 330, 10, 150);
+   fill("#ff4d6d");
+  circle(125, 290, 120);
+  fill("#ffffff");
+  circle(125, 290, 110);
+   fill("#ff4d6d");
+  circle(125, 290, 100);
+  fill("#ffffff");
+  circle(125, 290, 95);
+     fill("#ff4d6d");
+  circle(125, 290, 80);
+  fill("#ffffff");
+  circle(125, 290, 75);
+   fill("#ff4d6d");
+  circle(125, 290, 60);
+  fill("#ffffff");
+  circle(125, 290, 55);
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+ 
+  
+  
+}
