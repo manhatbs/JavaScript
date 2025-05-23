@@ -1,0 +1,28 @@
+let sfondo = "#eff6e0"
+let verde = "#aec3b02";
+let coloreTesto = "black";
+
+
+function setup() {
+  createCanvas(256, 512);
+  
+  background(sfondo);
+  
+  noStroke();
+  
+  fill(verde);
+  
+  circle(width / 2, height - 120, 50);
+  
+  rect(0, height - 120, 256, 256);
+  
+  fill(coloreTesto);
+  textSize(23);
+  text("“You only live once, but if you do it right, once is enough.”", 20, 20, width - 40, height  -60);
+  textSize(13);
+  text("― Mae West", 20, height - 100, width - 40, 100);
+  
+  
+  
+  
+}
