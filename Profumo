@@ -1,0 +1,22 @@
+function setup() {
+  createCanvas(900, 770);
+  background("#ffd8be");
+  noStroke();
+  
+  profumo(225, 400);
+  profumo(450, 550);
+ 
+}
+
+function profumo(){
+  fill("#b8b8ff");
+  square(125, 300, 200);
+   fill("#eee4e1");
+  circle(220, 250, 100)
+  fill("#e0afa0")
+  rect(190,350, 70)
+  
+
+  
+ 
+}
