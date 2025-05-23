@@ -1,0 +1,36 @@
+let ai;
+let inputUtente;
+
+function preload() {
+  ai = loadTask("text-generation");
+}
+
+function setup() {
+  createCanvas(windowWidth, 800);
+  background("#e2eafc");
+  noStroke();
+  textSize(16);
+  text("CookingMaster a tua disposizione🍳🍴", 30, 30);
+  ai.instructions("Sei un assistente virtuale di nome CookingMaster e devi aiutare le persone a cucinare fornendo loro ricette semplici con istruzioni ben dettagliate");
+  
+  inputUtente = createElement("textarea", "Hai qualcosa che desideri fare?");
+  
+  let bottonePoesia = createButton(" Domanda alla AI");
+  bottonePoesia.mousePressed(creaRisposta);
+}
+
+
+function creaRisposta() {
+  let testoUtente = inputUtente.value();
+   ai.generate(testoUtente);
+}
+
+function onText(testo, info) {
+  background("#e6e6fe");
+  fill("#333333");
+  
+  textSize(24);
+  textAlign(LEFT, BOTTOM); 
+  text(testo, 30, 30, width - 60, height - 60);
+  ai.chat(info.chat); 
+}
