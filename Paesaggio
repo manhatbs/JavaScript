@@ -1,0 +1,29 @@
+function setup() {
+  createCanvas(700, 500);
+}
+
+function draw() {
+  background("#73d2de");
+  fill("#7ae582");
+  rect(0, 400, 800, 100);
+   fill("#ffee93");
+  circle(30, 30, 150);
+  fill("#b23a48");
+  square(150, 200, 200);
+  fill("#caf0f8");
+  strokeWeight (5);
+  square(179, 240, 50);
+  square(270, 240, 50);
+   fill("#bc8a5f");
+  rect(225, 330, 50, 70);
+   fill("#d9d9d9");
+  rect(300, 160, 30, 40);
+  fill("#f4f3ee");
+  circle(345, 147, 20);
+   circle(380, 130, 40);
+  circle(433, 100, 60);
+  fill("#936639");
+  rect(550, 330, 30, 70);
+   fill("#52b788");
+  circle(565, 290, 120);
+}
