@@ -1,0 +1,50 @@
+let tm;
+
+
+function preload() {
+
+  tm = loadImageClassification("https://teachablemachine.withgoogle.com/models/Dr0ThjJOJ/");
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  
+ 
+  tm.start();
+}
+
+function onClassification(etichetta, dettagli) {
+  
+  clear(); 
+  let emoji = "⚠️\nControlla il codice!!!";
+  
+ 
+  if (etichetta == "cornetto") {
+    emoji = "🥐";
+  background("#ff006666");
+    
+  }
+  
+  if (etichetta == "ciambella") {
+    emoji = "🍩";
+    background("#ffcc6666");
+    //...disegna qualcosa di diverso
+  }
+  
+  textSize(42);
+  textAlign(CENTER, CENTER);
+  fill(255);
+  
+  text(etichetta, width / 2, height * 0.8);
+  
+  
+  
+  textSize(40);
+  text(emoji, width / 2, height / 2);
+}
+
+
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
