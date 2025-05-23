@@ -1,0 +1,37 @@
+//questo progetto riguarda l'obiettivo 15 dell'agenda ONU2030, AI che risponde alle domande delle persone riguardo questo argomento.
+let ai;
+let inputUtente;
+
+function preload() {
+  ai = loadTask("text-generation");
+}
+
+function setup() {
+  createCanvas(windowWidth, 800);
+  background("#99d98c");
+  noStroke();
+  textSize(24);
+  text("Mi puoi fare qualsiasi domanda riguardo la vita sulla terra🌍", 30, 30);
+  ai.instructions("Sei un assistente virtuale di nome earthAI e devi aiutare le persone a trovare risposte alle loro domande riguardo la vita sulla terra, raccolta differenziata, come possiamo migliorare la vita sulla terra e come tenere pulito il nostro piante ecc");
+  
+  inputUtente = createElement("textarea", "Hai qualcosa in mente?");
+  
+  let bottonePoesia = createButton(" Domanda alla AI");
+  bottonePoesia.mousePressed(creaRisposta);
+}
+
+
+function creaRisposta() {
+  let testoUtente = inputUtente.value();
+   ai.generate(testoUtente);
+}
+
+function onText(testo, info) {
+  background("#e9f5db");
+  fill("#333333");
+  
+  textSize(24);
+  textAlign(LEFT, BOTTOM); 
+  text(testo, 30, 30, width - 60, height - 60);
+  ai.chat(info.chat); 
+}
