@@ -1,0 +1,32 @@
+let ai; 
+
+function preload() {
+  ai = loadTask("text-generation");
+}
+
+function setup() {
+  createCanvas(500, 500);
+  background("#fdf0d5");
+  noStroke();
+  text("Clicca e chiedi alla AI", 30, 30, width - 60);
+  
+  
+  
+  let bottonecanzone = createButton("quotes");
+  bottonecanzone.mousePressed(creaquotes);
+}
+
+
+function creaquotes() {
+  ai.instructions("Sei un assistente poeta che deve creare un quote ");
+  ai.generate("vita");
+}
+
+
+
+function onText(testo, dettagli) {
+  background("#fdf0d5");
+  fill("#333333");
+  textSize(20);
+  text(testo, 30, 30, width - 60);
+}
