@@ -1,0 +1,30 @@
+function setup() {
+  createCanvas(400, 400);
+  background("#eae0d5");
+  noStroke();
+  
+  let cocomero = createButton("🍉 COCOMERO 🍉")
+ cocomero.mousePressed(disegnacocomero);
+  
+  let mela = createButton("🍎 MELA 🍎")
+  mela.mousePressed(disegnamela);
+}
+
+function disegnacocomero() {
+  background("#eae0d5");
+  fill("#40916c");
+  circle(200, 200, 200);
+  fill("#ff4d6d")
+  circle(200, 200, 180);
+  
+}
+
+
+function disegnamela() {
+  background("#eae0d5");
+  fill("#FF5722");
+  circle(200, 200, 200);
+  
+  fill("#4CAF50");
+  ellipse(250, 100, 100, 50);
+}
